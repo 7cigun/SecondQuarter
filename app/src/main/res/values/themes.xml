@@ -17,8 +17,9 @@
 
     <style name="SecondQuarterStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">#034AFF</item>
-        <item name="helperTextEnabled">false</item>
-        <item name="counterEnabled">false</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="counterEnabled">true</item>
+        <item name="counterMaxLength">20</item>
         <item name="errorTextColor">#FF0303</item>
     </style>
 
