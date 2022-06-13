@@ -12,5 +12,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="textInputStyle">@style/SecondQuarterStyle</item>
     </style>
+
+    <style name="SecondQuarterStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#034AFF</item>
+        <item name="helperTextEnabled">false</item>
+        <item name="counterEnabled">false</item>
+        <item name="errorTextColor">#FF0303</item>
+    </style>
+
 </resources>
