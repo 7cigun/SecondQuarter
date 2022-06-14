@@ -1,5 +1,7 @@
 package ru.gb.secondquarter.view.picture
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,6 +38,18 @@ class PictureOfTheDayFragment : Fragment() {
             renderData(it)
         })
         viewModel.sendRequest()
+
+        makeIconSearch()
+    }
+
+    private fun makeIconSearch(){
+        binding.inputLayout.setEndIconOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW).apply {
+                data =
+                    Uri.parse("https://en.wikipedia.org/wiki/${binding.inputEditText.text.toString()}")
+            })
+
+        }
     }
 
     private fun renderData(pictureOfTheDayAppState : PictureOfTheDayAppState){
