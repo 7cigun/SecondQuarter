@@ -33,9 +33,15 @@ class BottomNavigationDrawerFragment : BottomSheetDialogFragment() {
                         "На экран 1",
                         Toast.LENGTH_SHORT
                     ).show()
+                    dismiss()
                 }
                 R.id.navigation_two -> {
-                    Toast.makeText(context, "На экран 2", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "На экран 2",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    dismiss()
                 }
             }
             true
