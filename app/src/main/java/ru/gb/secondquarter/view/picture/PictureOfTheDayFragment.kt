@@ -1,13 +1,13 @@
 package ru.gb.secondquarter.view.picture
 
+import android.app.Application
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import coil.load
@@ -15,6 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import ru.gb.secondquarter.R
 import ru.gb.secondquarter.databinding.BottomSheetLayoutBinding
 import ru.gb.secondquarter.databinding.FragmentPictureOfTheDayBinding
+import ru.gb.secondquarter.view.MainActivity
 import ru.gb.secondquarter.viewmodel.PictureOfTheDayAppState
 import ru.gb.secondquarter.viewmodel.PictureOfTheDayViewModel
 
@@ -32,6 +33,20 @@ class PictureOfTheDayFragment : Fragment() {
 
     private val viewModel : PictureOfTheDayViewModel by lazy {
         ViewModelProvider(this).get(PictureOfTheDayViewModel::class.java)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_bottom_bar, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.app_bar_fav -> {Toast.makeText(requireContext().applicationContext,"Нажата кнопка Избранное", Toast.LENGTH_SHORT).show()}
+            R.id.app_bar_settings -> {Toast.makeText(context,"Нажата кнопка Настройки", Toast.LENGTH_SHORT).show()}
+            android.R.id.home -> { BottomNavigationDrawerFragment.newInstance().show(requireActivity().supportFragmentManager, "") }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -78,6 +93,9 @@ class PictureOfTheDayFragment : Fragment() {
             }
 
         })
+
+        (requireActivity() as MainActivity).setSupportActionBar(binding.bottomAppBar)
+        setHasOptionsMenu(true)
     }
 
     private fun renderData(pictureOfTheDayAppState : PictureOfTheDayAppState){

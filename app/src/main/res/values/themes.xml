@@ -13,6 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="textInputStyle">@style/SecondQuarterStyle</item>
+        <item name="floatingActionButtonStyle">@style/MyStyleFloatingActionButton</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="SecondQuarterStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -23,7 +27,12 @@
         <item name="errorEnabled">true</item>
         <item name="errorTextColor">#FF0303</item>
         <item name="boxStrokeWidthFocused">3dp</item>
+    </style>
 
+    <style name="MyStyleFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="tint">?colorPrimary</item>
+        <item name="rippleColor">?colorSecondary</item>
+        <item name="borderWidth">2dp</item>
     </style>
 
 </resources>
