@@ -14,10 +14,14 @@
         <!-- Customize your theme here. -->
         <item name="textInputStyle">@style/SecondQuarterStyle</item>
         <item name="floatingActionButtonStyle">@style/MyStyleFloatingActionButton</item>
+        <item name="chipStyle">@style/MyChipStyle</item>
+
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="MyChipStyle" parent="Widget.MaterialComponents.Chip.Choice"></style>
 
     <style name="SecondQuarterStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">#034AFF</item>
