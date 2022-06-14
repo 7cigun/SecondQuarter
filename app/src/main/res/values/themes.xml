@@ -20,7 +20,10 @@
         <item name="helperTextEnabled">true</item>
         <item name="counterEnabled">true</item>
         <item name="counterMaxLength">20</item>
+        <item name="errorEnabled">true</item>
         <item name="errorTextColor">#FF0303</item>
+        <item name="boxStrokeWidthFocused">3dp</item>
+
     </style>
 
 </resources>
