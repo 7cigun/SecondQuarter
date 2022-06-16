@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SecondQuarter</string>
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+    <string name="tdby">Позавчера</string>
+    <string name="search_wiki">Найти в Википедии</string>
+    <string name="wiki_helper_text">Поищите термин в википедии</string>
+    <string name="favourite">избранное</string>
+    <string name="settings">настройки</string>
+    <string name="search">Поиск</string>
+</resources>
