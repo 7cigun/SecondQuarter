@@ -20,6 +20,9 @@
 
         <item name="textAppearanceBody2">@style/MyTextAppearance</item>
 
+        <item name="shapeAppearanceSmallComponent">@style/MySmallShape</item>
+        <item name="shapeAppearanceLargeComponent">@style/MyLargeShape</item>
+
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
