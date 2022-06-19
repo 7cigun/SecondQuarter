@@ -1,6 +1,5 @@
 package ru.gb.secondquarter.view.picture
 
-import android.app.Application
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -15,10 +14,11 @@ import coil.load
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.chip.Chip
+import com.google.android.material.tabs.TabLayout
 import ru.gb.secondquarter.R
-import ru.gb.secondquarter.databinding.BottomSheetLayoutBinding
 import ru.gb.secondquarter.databinding.FragmentPictureOfTheDayBinding
 import ru.gb.secondquarter.view.MainActivity
+import ru.gb.secondquarter.view.settings.SettingsFragment
 import ru.gb.secondquarter.viewmodel.PictureOfTheDayAppState
 import ru.gb.secondquarter.viewmodel.PictureOfTheDayViewModel
 
@@ -57,7 +57,8 @@ class PictureOfTheDayFragment : Fragment() {
                 ).show()
             }
             R.id.app_bar_settings -> {
-                Toast.makeText(context, "Нажата кнопка Настройки", Toast.LENGTH_SHORT).show()
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, SettingsFragment.newInstance()).addToBackStack("").commit()
             }
             android.R.id.home -> {
                 BottomNavigationDrawerFragment.newInstance()
@@ -79,7 +80,7 @@ class PictureOfTheDayFragment : Fragment() {
         makeBottomSheet()
         runBottomBar()
         checkIsMain()
-        chipSet()
+        tabSet()
     }
 
     private fun makeIconSearch() {
@@ -150,18 +151,26 @@ class PictureOfTheDayFragment : Fragment() {
         }
     }
 
-    private fun chipSet() {
-        binding.chipGroup.setOnCheckedChangeListener { group, position ->
-            /* TODO HW
-             when(position){
-                1->{viewModel.sendRequestToday()}
+    private fun tabSet() {
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                Toast.makeText(requireContext(), "${tab?.position}", Toast.LENGTH_SHORT).show()
+                when (tab?.position) {
+                    /*1->{viewModel.sendRequestToday()}
                 2->{viewModel.sendRequestYT()}
-                3->{viewModel.sendRequestTDBY()}
-            }*/
-            group.findViewById<Chip>(position)?.let {
-                Log.d("@@@", "${it.text.toString()} $position")
+                3->{viewModel.sendRequestTDBY()}*/
+                }
             }
-        }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                //TODO("Not yet implemented")
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                //TODO("Not yet implemented")
+            }
+
+        })
     }
 
     private fun renderData(pictureOfTheDayAppState: PictureOfTheDayAppState) {

@@ -12,4 +12,7 @@
     <string name="today">Today</string>
     <string name="yesterday">Yesterday</string>
     <string name="tdby">TDBY</string>
+    <string name="space_theme">Space theme</string>
+    <string name="flower_theme">Flower theme</string>
+    <string name="lime_theme">Lime theme</string>
 </resources>

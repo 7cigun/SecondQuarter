@@ -16,6 +16,7 @@
         <item name="floatingActionButtonStyle">@style/MyStyleFloatingActionButton</item>
         <item name="chipStyle">@style/MyChipStyle</item>
 
+        <item name="tabStyle">@style/MyTabStyle</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

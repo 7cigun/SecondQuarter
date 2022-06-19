@@ -17,4 +17,8 @@
         <item name="rippleColor">?superColor</item>
         <item name="borderWidth">2dp</item>
     </style>
+
+    <style name="MyTabStyle" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabRippleColor">@drawable/my_ripple</item>
+    </style>
 </resources>

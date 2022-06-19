@@ -9,4 +9,7 @@
     <string name="favourite">избранное</string>
     <string name="settings">настройки</string>
     <string name="search">Поиск</string>
+    <string name="space_theme">Космическая</string>
+    <string name="flower_theme">Цветочная</string>
+    <string name="lime_theme">Лаймовая</string>
 </resources>
