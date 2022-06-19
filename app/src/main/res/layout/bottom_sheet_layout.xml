@@ -25,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/sheet_tv_margin_top"
+        android:fontFamily="More Fonts..."
         android:paddingStart="@dimen/sheet_tv_start_padding"
         android:paddingEnd="@dimen/sheet_tv_end_padding"
         android:textColor="#000"

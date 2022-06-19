@@ -18,6 +18,8 @@
 
         <item name="tabStyle">@style/MyTabStyle</item>
 
+        <item name="textAppearanceBody2">@style/MyTextAppearance</item>
+
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
